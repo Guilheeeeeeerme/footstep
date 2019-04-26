@@ -1,5 +1,11 @@
 
 
+clone-it-all:
+	rm -rf evccollect  || true
+	git clone https://guilheeeeeeerme@bitbucket.org/wgoularts/evccollect.git
+	rm -rf events-parser  || true
+	git clone https://guilheeeeeeerme@bitbucket.org/wgoularts/events-parser.git
+
 create-network:
 	docker network create footstep
 
