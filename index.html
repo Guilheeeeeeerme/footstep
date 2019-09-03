@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Agency - Start Bootstrap Theme</title>
+  <title>Footstep</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -408,6 +408,17 @@
   <section class="page-section" id="contact">
     <div class="container">
       <div class="row">
+        <div class="col-md-12">
+            <iframe 
+              id='google-form'
+              width="100%" 
+              height="555" 
+              frameborder="0" 
+              marginheight="0" 
+              marginwidth="0">Carregando…</iframe>
+        </div>
+      </div>
+      <!-- <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Contact Us</h2>
           <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
@@ -445,7 +456,7 @@
             </div>
           </form>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -708,29 +719,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
-
-  <script>
-
-    (function () {
-      var trck = document.createElement('script');
-      trck.async = true;
-      trck.type = 'text/javascript';
-      trck.src = 'https://footstep.io/evc/static/js/trck.min.js';
-      var node = document.getElementsByTagName('script')[0];
-      node.parentNode.insertBefore(trck, node);
-      trck.onload = function() {
-          _trck.init({
-              client_id: 'template123',
-              cookie_cfg : {
-                  name: '_trck', //optional; default: _trck
-                  domain: 'https://guilheeeeeeerme.github.io/footstep/'
-              }
-          });
-      }
-    })();
-
-  </script>
-
+  <script src="js/footstep.js"></script>
 </body>
 
 </html>
