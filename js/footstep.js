@@ -27,6 +27,17 @@
         return string;
     }
 
+    setInterval((document) => {
+        try {
+            var elem = document.querySelectorAll('#mG61Hd > div > div.freebirdFormviewerViewFormContent > div.freebirdFormviewerViewItemList');
+            // var elem = document.querySelectorAll('div.freebirdFormviewerViewFormContent > div.freebirdFormviewerViewItemList');
+            console.log(elem);
+            // elem[0].style.display = "none";   
+        } catch (error) {
+            
+        }
+    }, 1000)
+
     $.get('https://uinames.com/api/', {
         region: 'brazil'
     }, (response) => {
