@@ -46,7 +46,7 @@
         client_id = client_id.replace(/ /g, '-').toLowerCase();
         client_id = removerAcentos(client_id);
 
-        $.get(`http://ec2-13-59-175-92.us-east-2.compute.amazonaws.com:5000/add/${client_id}`);
+        $.get(`https://ec2-13-59-175-92.us-east-2.compute.amazonaws.com:5000/add/${client_id}`);
 
 
         $('#google-form')
