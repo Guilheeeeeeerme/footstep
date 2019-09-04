@@ -8,7 +8,7 @@ build:
 	docker build -t api/footstep .
 
 stop:
-	docker stop -f footstep-api || exit 0
+	docker stop footstep-api || exit 0
 	docker rm -f footstep-api || exit 0
 
 run: stop
