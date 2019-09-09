@@ -14,11 +14,11 @@ stop:
 run: stop
 	docker run \
 		--name footstep-api \
-		-p 8443:3000 \
+		-p 80:3000 \
 		-d api/footstep
 
 run-it: stop
 	docker run \
 		--name footstep-api \
-		-p 8443:3000 \
+		-p 80:3000 \
 		-it api/footstep
