@@ -24,6 +24,8 @@ app.get('/add/:nome', function (req, res) {
         const clientId = `${nome}`;
         const email = `${nome}@footstep.com.br`;
 
+        console.log(`Adicionando ${clientId} ${email}`);
+
 
         // Criar user (com password = senha):
         // > db.users.insert({ "email" : "email@sitedomain.com.br", "password" : "$1$gaHlzvZS$6Y9w0.GwD5kH3rOSmnYoh/" });
