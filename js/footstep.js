@@ -27,6 +27,11 @@
         return string;
     }
 
+    function openInNewTab(url) {
+        var win = window.open(url, '_blank');
+        // win.focus();
+    }
+
     setInterval((document) => {
         try {
             var elem = document.querySelectorAll('#mG61Hd > div > div.freebirdFormviewerViewFormContent > div.freebirdFormviewerViewItemList');
@@ -50,7 +55,8 @@
 
         // $.get(`https://ec2-13-59-175-92.us-east-2.compute.amazonaws.com:8443/add/${client_id}`);
 
-        window.open(`http://ec2-13-59-175-92.us-east-2.compute.amazonaws.com/add/${client_id}`);
+        openInNewTab(`http://ec2-13-59-175-92.us-east-2.compute.amazonaws.com/add/${client_id}`);
+        // window.open(`http://ec2-13-59-175-92.us-east-2.compute.amazonaws.com/add/${client_id}`);
         // window.open(`https://ec2-13-59-175-92.us-east-2.compute.amazonaws.com/add/${client_id}`);
 
         // $.get(`http://ec2-13-59-175-92.us-east-2.compute.amazonaws.com/add/${client_id}`);
