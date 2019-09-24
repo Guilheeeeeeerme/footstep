@@ -59,8 +59,10 @@
         $('#google-form')
             .attr(
                 'src',
-                `https://docs.google.com/forms/d/e/1FAIpQLSfh9lfSIJEJ-35aFELWsKVdfKnqz7MJmS4-ZDwNHXqcaEFdYA/viewform?embedded=true&entry.1535443542=${client_id}`
+                `https://docs.google.com/forms/d/e/1FAIpQLSfh9lfSIJEJ-35aFELWsKVdfKnqz7MJmS4-ZDwNHXqcaEFdYA/viewform?usp=pp_url&entry.592350318=${client_id}`
             )
+
+            
 
         var trck = document.createElement('script');
         trck.async = true;
