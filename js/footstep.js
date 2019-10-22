@@ -81,11 +81,40 @@
                 client_id: client_id,
                 cookie_cfg: {
                     name: '_trck', //optional; default: _trck
-                    domain: 'https://guilheeeeeeerme.github.io/footstep/'
+                    domain: 'www.fatecoins.com.br'
                 }
             });
         }
 
     });
+
+})();
+
+(function () {
+
+    // coloquei em um try catch pra nao dar errado de nenhuma maneira para seu cliente
+    try {
+
+        const client_id = 'COLOQUE O IDENTIFICADOR DO USUÁRIO AQUI';
+
+        var trck = document.createElement('script');
+        trck.async = true;
+        trck.type = 'text/javascript';
+        trck.src = 'https://footstep.io/evc/static/js/trck.min.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(trck, node);
+        trck.onload = function () {
+            _trck.init({
+                client_id: client_id,
+                cookie_cfg: {
+                    name: '_trck', //optional; default: _trck
+                    domain: 'www.fatecoins.com.br'
+                }
+            });
+        }
+
+    } catch (e) {
+        
+    }
 
 })();
