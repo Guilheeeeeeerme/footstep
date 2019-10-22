@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<body ng-app="footstepData">
+
+    <div class="container" ng-controller="footstepDataController as controller">
+        <div class="row">
+            <div class="col-md-12" ng-repeat="(user, actions) in footstep">
+
+                <table class="table table-sm table-condensed table-stripped" >
+                    <caption>Data of user <strong>{{ user }}</strong> ({{ actions.length }} actions) </caption>
+                    <thead>
+                        <tr>
+
+                                <!-- <th>elementLabel</th> -->
+                                <th>client_id</th>
+                                <th>date</th>
+                                <th>date_str</th>
+                                <th>event</th>
+                                <!-- <th>id</th>
+                                <th>interaction_id</th>
+                                <th>mouse_position_left</th>
+                                <th>mouse_position_top</th> -->
+    
+                                <!-- <th>elementLabel</th>
+                                <th>client_id</th> -->
+                                <th>id</th>
+                                <!-- <th>index</th> -->
+                                <!-- <th>parent_id</th>
+                                <th>tag</th>
+                                <th>tag_classes</th>
+                                <th>tag_id</th>
+                                <th>tag_offset_left</th>
+                                <th>tag_offset_top</th> -->
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="action in actions">
+
+                            <!-- <td>{{ action.event["elementLabel"] }}</td> -->
+                            <td>{{ action.event["client_id"] }}</td>
+                            <td>{{ action.event["date"] | date : 'dd/MM/yyyy HH:mm:ss' }}</td>
+                            <td>{{ action.event["date_str"] }}</td>
+                            <td>{{ action.event["event"] }}</td>
+                            <!-- <td>{{ action.event["id"] }}</td>
+                            <td>{{ action.event["interaction_id"] }}</td> -->
+                            <!-- <td>{{ action.event["mouse_position_left"] }}</td>
+                            <td>{{ action.event["mouse_position_top"] }}</td> -->
+
+                            <!-- <td>{{ action.element["elementLabel"] }}</td> -->
+                            <!-- <td>{{ action.element["client_id"] }}</td> -->
+                            <td>{{ action.element["id"] }}</td>
+                            <!-- <td>{{ action.element["index"] }}</td> -->
+                            <!-- <td>{{ action.element["parent_id"] }}</td> -->
+                            <!-- <td>{{ action.element["tag"] }}</td>
+                            <td>{{ action.element["tag_classes"] }}</td>
+                            <td>{{ action.element["tag_id"] }}</td>
+                            <td>{{ action.element["tag_offset_left"] }}</td>
+                            <td>{{ action.element["tag_offset_top"] }}</td> -->
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="./app/app.module.js"></script>
+    <script src="./app/app.component.js"></script>
+</body>
+
+</html>
