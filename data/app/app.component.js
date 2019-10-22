@@ -9,7 +9,7 @@
 
         $scope.footstep = {};
 
-        $http.get('/data/footstep.json')
+        $http.get('/footstep/data/footstep.json')
             .then((footstep) => {
                 const footstepUserData = footstep.data;
 
